@@ -1,0 +1,11 @@
+{
+  "name": "spacex-ipo-prospectus",
+  "version": "1.0.0",
+  "description": "SpaceX IPO Prospectus Overview with Chat",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.16.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
