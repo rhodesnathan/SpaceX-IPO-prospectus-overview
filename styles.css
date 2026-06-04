@@ -1,0 +1,333 @@
+/* ── Reset / base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { margin: 0; background: #0D0F11; }
+
+/* ── Root shell ───────────────────────────────────────────── */
+.spcx-root {
+  background: #0D0F11;
+  color: #fff;
+  font-family: 'Barlow', sans-serif;
+  min-height: 100vh;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.spcx-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  border-bottom: 1px solid #1e2226;
+  background: #0D0F11;
+}
+.spcx-logo { height: 28px; width: auto; }
+.spcx-ticker {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  color: #6b7785;
+  letter-spacing: 0.5px;
+}
+.spcx-ticker strong {
+  color: #4d9ecf;
+  font-weight: 600;
+  margin: 0 6px;
+}
+
+/* ── Nav ──────────────────────────────────────────────────── */
+.spcx-nav {
+  display: flex;
+  gap: 2px;
+  padding: 12px 32px;
+  background: #111417;
+  border-bottom: 1px solid #1e2226;
+  overflow-x: auto;
+}
+.spcx-nav-btn {
+  display: block;
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #6b7785;
+  background: none;
+  border: 1px solid transparent;
+  padding: 7px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.spcx-nav-btn:hover {
+  color: #c8cdd2;
+  background: #1a1e23;
+}
+.spcx-nav-btn.active {
+  color: #fff;
+  border-color: #2e3a47;
+  background: #141a20;
+}
+
+/* ── Body / section ───────────────────────────────────────── */
+.spcx-body {
+  padding: 32px 32px 64px;
+  max-width: 900px;
+}
+
+/* ── Typography ───────────────────────────────────────────── */
+.spcx-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #4d9ecf;
+  margin-bottom: 8px;
+}
+.spcx-h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 28px;
+  line-height: 1.1;
+}
+
+/* ── Metric grid ──────────────────────────────────────────── */
+.spcx-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+@media (max-width: 700px) {
+  .spcx-metric-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.spcx-metric {
+  background: #111417;
+  border: 1px solid #1e2226;
+  border-radius: 4px;
+  padding: 16px;
+}
+.spcx-metric-label {
+  font-size: 11px;
+  color: #6b7785;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 6px;
+}
+.spcx-metric-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.spcx-metric-sub {
+  font-size: 11px;
+  color: #4b5563;
+}
+
+/* ── Cards ────────────────────────────────────────────────── */
+.spcx-card {
+  background: #111417;
+  border: 1px solid #1e2226;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+.spcx-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #8a95a0;
+  margin-bottom: 12px;
+}
+.spcx-card-body {
+  font-size: 14px;
+  color: #8a95a0;
+  line-height: 1.6;
+}
+.spcx-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+@media (max-width: 600px) {
+  .spcx-two-col { grid-template-columns: 1fr; }
+}
+
+/* ── Row (key / value) ────────────────────────────────────── */
+.spcx-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid #1a1e24;
+  font-size: 13px;
+}
+.spcx-row:last-child { border-bottom: none; }
+.spcx-row-label { color: #6b7785; }
+.spcx-row-value { color: #c8cdd2; font-weight: 500; }
+.spcx-row-value.neg { color: #c04040; }
+.spcx-row-value.pos { color: #4a9e6a; }
+
+/* ── Alert banner ─────────────────────────────────────────── */
+.spcx-alert {
+  background: #141a20;
+  border: 1px solid #2e3a47;
+  border-left: 3px solid #4d9ecf;
+  border-radius: 4px;
+  padding: 14px 18px;
+  font-size: 13px;
+  color: #7da8c8;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.spcx-alert strong { color: #4d9ecf; font-weight: 600; }
+
+/* ── Flag ─────────────────────────────────────────────────── */
+.flag {
+  display: inline-block;
+  background: #1e1410;
+  border: 1px solid #5a2e0a;
+  color: #c07830;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  margin-bottom: 12px;
+}
+
+/* ── Bar chart rows ───────────────────────────────────────── */
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+.bar-label { width: 110px; color: #6b7785; flex-shrink: 0; }
+.bar-track {
+  flex: 1;
+  background: #1a1e24;
+  border-radius: 2px;
+  height: 8px;
+  overflow: hidden;
+}
+.bar-fill-blue  { height: 100%; background: #2c6a9a; border-radius: 2px; }
+.bar-fill-gray  { height: 100%; background: #2e3540; border-radius: 2px; }
+.bar-fill-red   { height: 100%; background: #7a2020; border-radius: 2px; }
+.bar-fill-green { height: 100%; background: #1e5c38; border-radius: 2px; }
+.bar-value { width: 60px; text-align: right; color: #8a95a0; font-size: 12px; }
+
+/* ── Segment grid ─────────────────────────────────────────── */
+.seg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+@media (max-width: 700px) {
+  .seg-grid { grid-template-columns: 1fr; }
+}
+.seg-card {
+  background: #111417;
+  border: 1px solid #1e2226;
+  border-radius: 4px;
+  padding: 20px;
+}
+.seg-card.featured { border-color: #2e3a47; }
+.seg-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.tag-amber { background: #2a1e08; color: #b08030; border: 1px solid #5a3e10; }
+.tag-blue  { background: #0e1e2e; color: #4d9ecf; border: 1px solid #1e4060; }
+.tag-red   { background: #200e0e; color: #c04040; border: 1px solid #5a1a1a; }
+.seg-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 10px 0 4px;
+}
+.seg-rev {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #c8cdd2;
+  line-height: 1;
+}
+.seg-rev-label {
+  font-size: 11px;
+  color: #4b5563;
+  margin: 4px 0 12px;
+}
+.seg-detail { font-size: 13px; color: #6b7785; line-height: 1.55; }
+
+/* ── Timeline ─────────────────────────────────────────────── */
+.timeline-item {
+  display: flex;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid #1a1e24;
+  align-items: flex-start;
+}
+.timeline-item:last-child { border-bottom: none; }
+.tl-year {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2e4a60;
+  width: 52px;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+.tl-text { font-size: 13px; color: #6b7785; line-height: 1.6; }
+
+/* ── Risk list ────────────────────────────────────────────── */
+.risk-list { list-style: none; }
+.risk-item {
+  background: #111417;
+  border: 1px solid #1e2226;
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin-bottom: 10px;
+}
+.risk-item.crit { border-left: 3px solid #8a2020; }
+.risk-item.sig  { border-left: 3px solid #7a5c20; }
+.risk-severity {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.risk-severity.crit { color: #c04040; }
+.risk-severity.sig  { color: #b08030; }
+.risk-severity.low  { color: #4a9e6a; }
+.risk-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #c8cdd2;
+  margin-bottom: 6px;
+}
+.risk-body { font-size: 13px; color: #6b7785; line-height: 1.6; }
