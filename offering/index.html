@@ -30,6 +30,23 @@
 </nav>
 
 <main class="spcx-body">
+  <div class="spcx-chat-container">
+    <div class="spcx-chat-header" id="spcx-chat-header">
+      <span class="spcx-chat-title">Ask About This IPO</span>
+      <span class="spcx-chat-toggle" id="spcx-chat-toggle">▼</span>
+    </div>
+    <div class="spcx-chat-body" id="spcx-chat-body"></div>
+    <div class="spcx-chat-footer" id="spcx-chat-footer">
+      <input
+        type="text"
+        id="spcx-chat-input"
+        class="spcx-chat-input"
+        placeholder="Ask a question..."
+      />
+      <button id="spcx-chat-submit" class="spcx-chat-submit">Send</button>
+    </div>
+  </div>
+
   <div class="spcx-eyebrow">Preliminary Prospectus — May 20, 2026</div>
   <div class="spcx-h1">IPO Offering Details</div>
   <div class="spcx-metric-grid">
@@ -58,5 +75,6 @@
 </div>
 
 </div>
+<script src="/chat.js"></script>
 </body>
 </html>
